@@ -1,13 +1,18 @@
-import Link from "next/link";
-import React from "react";
+import classes from "./page.module.css";
 
-const Share = () => {
+const MealsPage = () => {
   return (
-    <div>
-      <h2>Meals page</h2>
-      <Link href="/">Home</Link>
-    </div>
+    <>
+      <header className={classes.header}>
+        <h1>
+          Delicious meals, created
+          <span className={classes.highlight}>by you</span>
+        </h1>
+        <p>Choose your favorite recipe and cook it yourself.</p>
+      </header>
+      <main className={classes.main}></main>
+    </>
   );
 };
 
-export default Share;
+export default MealsPage;
