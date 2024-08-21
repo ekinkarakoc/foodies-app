@@ -14,7 +14,7 @@ export default function ShareMealPage() {
   const status = useFormStatus();
   // const router = useRouter();
 
-  const notify = () => toast("Wow so easy!");
+  const notify = () => toast("We got your recipe!");
 
   const submitting = () => {
     notify();
