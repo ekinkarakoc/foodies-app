@@ -7,7 +7,7 @@ import Image from "next/image";
 const ImagePicker = ({ label, name }) => {
   const [pickedImage, setPickedImage] = useState();
   const imageHref = useRef();
-  const fileReader = new FileReader();
+  const fileReader = new window.FileReader();
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
