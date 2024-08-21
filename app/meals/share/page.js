@@ -1,6 +1,5 @@
 "use client";
 import { useFormStatus } from "react-dom";
-import ImagePicker from "@/components/meals/image-picker";
 import classes from "./page.module.css";
 import MealsFormSubmit from "@/components/meals/meals-form-submit";
 
@@ -58,7 +57,6 @@ export default function ShareMealPage() {
               required
             ></textarea>
           </p>
-          <ImagePicker label="Your image" name="image" />
           <p className={classes.actions}>
             <MealsFormSubmit />
           </p>
