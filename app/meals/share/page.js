@@ -2,11 +2,24 @@
 import { useFormStatus } from "react-dom";
 import ImagePicker from "@/components/meals/image-picker";
 import classes from "./page.module.css";
-import { shareMeal } from "@/lib/actions";
 import MealsFormSubmit from "@/components/meals/meals-form-submit";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import "react-toastify/dist/ReactToastify.css";
+import { redirect } from "next/navigation";
 
 export default function ShareMealPage() {
   const status = useFormStatus();
+  // const router = useRouter();
+
+  const notify = () => toast("Wow so easy!");
+
+  const submitting = () => {
+    notify();
+    redirect("/meals");
+  };
 
   return (
     <>
@@ -17,7 +30,7 @@ export default function ShareMealPage() {
         <p>Or any other meal you feel needs sharing!</p>
       </header>
       <main className={classes.main}>
-        <form className={classes.form} action={shareMeal}>
+        <form className={classes.form} action={submitting}>
           <div className={classes.row}>
             <p>
               <label htmlFor="name">Your name</label>
